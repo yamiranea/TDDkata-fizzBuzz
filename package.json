@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Write a failure test for simple behavior and refactor",
+  "main": "FizzBuzz.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yamiranea/kata-fizzBuzz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yamiranea/kata-fizzBuzz/issues"
+  },
+  "homepage": "https://github.com/yamiranea/kata-fizzBuzz#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
