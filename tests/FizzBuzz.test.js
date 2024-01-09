@@ -1,34 +1,22 @@
 const { expect } = require("@jest/globals");
 const FizzBuzz = require("../FizzBuzz");
 
-describe("test that validates 3 and 5 multiples", () => {
-  test("test return Fizz when number could be divided by 3", () => {
-    const number = 3;
-    const expectedResponse = "Fizz";
-    const fizz = new FizzBuzz();
+describe("FizzBuzz tests", () => {
+  let fizzBuzz;
 
-    const receivedResponse = fizz.validate_primes_3_5(number);
-
-    expect(receivedResponse).toBe(expectedResponse);
+  beforeEach(() => {
+    fizzBuzz = new FizzBuzz();
   });
 
-  test("test return Buzz when number could be divided by 5", () => {
-    const number = 5;
-    const expectedResponse = "Buzz";
-    const buzz = new FizzBuzz();
-
-    const receivedResponse = buzz.validate_primes_3_5(number);
-
-    expect(receivedResponse).toBe(expectedResponse);
+  test("return Fizz when number is divisible by 3", () => {
+    expect(fizzBuzz.validate_primes_3_5(3)).toBe("Fizz");
   });
 
-  test("test return FizzBuzz when number could be divided by 3 and 5", () => {
-    const number = 15;
-    const expectedResponse = "FizzBuzz";
-    const fizzBuzz = new FizzBuzz();
+  test("return Buzz when number is divisible by 5", () => {
+    expect(fizzBuzz.validate_primes_3_5(5)).toBe("Buzz");
+  });
 
-    const receivedResponse = fizzBuzz.validate_primes_3_5(number);
-
-    expect(receivedResponse).toBe(expectedResponse);
+  test("return FizzBuzz when number is divisible by both 3 and 5", () => {
+    expect(fizzBuzz.validate_primes_3_5(15)).toBe("FizzBuzz");
   });
 });
